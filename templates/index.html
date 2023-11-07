@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello world</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum non fugit voluptates nesciunt iste <br>
+        repellendus excepturi a est suscipit aperiam doloribus consequuntur ipsam ab iure id, ducimus nulla? <br>
+        Illum, ducimus.
+    </p>
+    
+    <h2>Companies</h2>
+
+    <div>
+        <div class="container">
+            <table>
+                <thead>
+                    <tr>
+                        <td>S.NO</td>
+                        <td>Company</td>
+                        <td>Location</td>
+                        <td>Email</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{range $index, $company := .companies}}
+                    <tr>
+                        <td>{{$index}}</td>
+                        <td>{{$company.Name}}</td>
+                        <td>{{$company.Location}}</td>
+                        <td>{{$company.Email}}</td>
+                    </tr>
+                    {{end}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
